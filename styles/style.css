@@ -1,0 +1,18 @@
+html {
+    background-color: black;
+    font-size: 16px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.matrix {
+    border: 3px solid #00ff00; /* Зелёная обводка */
+    border-radius: 8px; /* скругление углов */
+    position: relative;
+    top: -40px; /*вверх на 40px */
+}
