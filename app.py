@@ -1,7 +1,7 @@
 from flask import Flask, render_template, session, redirect, request
 
 app = Flask(__name__)
-app.secret_key = 'secret.key.hui'  # Change this in production!
+app.secret_key = 'secret.key.hui'
 
 @app.route('/')
 def home():
