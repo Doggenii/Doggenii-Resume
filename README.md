@@ -73,7 +73,7 @@ I specialize in creating practical solutions that solve real-world problems. My 
 - GitHub: [github.com/Doggenii](https://github.com/Doggenii)
 - Telegram: [@NjGeR](https://t.me/NjGeR)
 - Location: Russia, Irkutsk
-- Availability: Open for new projects and collaborations
+- Open for new projects and collaborations
 
 ## 🎨 About This Website
 
@@ -81,9 +81,7 @@ This portfolio includes:
 - Matrix design with green neon aesthetics
 - Fully responsive design for all devices
 - Multi-language support (English/Russian)
-- Flask backend with session management
-- Modern layouts using CSS Grid & Flexbox
-- Smooth animations and hover effects
+- Flask backend
 
 ---
 
@@ -152,7 +150,6 @@ RU
 
 ### Инструменты и технологии
 - Git & GitHub
-- Linux/Windows окружения
 - Работа с API
 - Распознавание речи
 - Анализ данных
@@ -166,7 +163,7 @@ RU
 - GitHub: [github.com/Doggenii](https://github.com/Doggenii)
 - Telegram: [@NjGeR](https://t.me/NjGeR)
 - Местоположение: Россия, Иркутск
-- Доступность: Открыт для новых проектов и коллабораций
+- Открыт для новых проектов и коллабораций
 
 ## 🎨 О этом сайте
 
@@ -174,9 +171,7 @@ RU
 - Matrix-дизайн с зеленой неоновой эстетикой
 - Полностью адаптивный дизайн для всех устройств
 - Поддержка двух языков (Английский/Русский)
-- Flask бэкенд с управлением сессиями
-- Современные верстки на CSS Grid & Flexbox
-- Плавные анимации и hover-эффекты
+- Flask бэкенд
 
 ---
 
