@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
+<html lang="{{ language }}">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doggenii resume</title>
-    <link rel="stylesheet" href="styles/style.css">
-  </head>
-  <body>
-    <header>
-    <div class="container">
-      <img src="/images/matrix-code.gif" class="matrix" alt="matrix-code">
+    <title>{% if language == 'ru' %}Резюме Doggenii{% else %}Doggenii resume{% endif %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/responsive.css') }}">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <a href="{{ url_for('set_language', language='en') }}" 
+           class="lang-btn {% if language == 'en' %}active{% endif %}">EN</a>
+        <a href="{{ url_for('set_language', language='ru') }}" 
+           class="lang-btn {% if language == 'ru' %}active{% endif %}">RU</a>
     </div>
-    </header>
-    <main class="description-text">
-      <img src="{{ url_for('static', filename='/images/github_icon.png') }} alt="github-icon" class="github-icon">
 
-      <a href="https://github.com/Doggenii" class="github-href">GitHub</a>
+    <header>
+        <div class="container">
+            <img src="{{ url_for('static', filename='images/matrix-code.gif') }}" 
+                 class="matrix" 
+                 alt="matrix-code">
+        </div>
+    </header>
+    
+    <main class="content-section">
+        <!-- GitHub Link -->
+        <div class="link-item">
+            <img src="{{ url_for('static', filename='images/github_icon.png') }}" 
+                 alt="github-icon" 
+                 class="github-icon">
+            <a href="https://github.com/Doggenii" class="github-href">GitHub-Doggenii</a>
+        </div>
+        
+        <!-- Projects Link -->
+        <a href="{{ url_for('projects') }}" class="projects-link">
+            {% if language == 'ru' %}Мои проекты{% else %}My projects{% endif %}
+        </a>
     </main>
-    <footer>
-    </footer>
-  </body>
+</body>
 </html>

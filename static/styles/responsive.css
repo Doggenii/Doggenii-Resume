@@ -1,0 +1,189 @@
+/* ===== RESPONSIVE DESIGN ===== */
+/* This file contains all media queries for different screen sizes */
+
+/* Large desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets and small desktops (768px - 1199px) */
+@media (max-width: 1199px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .language-switcher {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .content-section {
+        margin-top: -100px;
+    }
+    
+    .matrix {
+        top: -20px;
+    }
+    
+    .projects-header {
+        padding: 30px 15px;
+    }
+    
+    .intro-text h1 {
+        font-size: 1.8em;
+    }
+    
+    .intro-text p {
+        font-size: 1.1em;
+    }
+    
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+    .project-content {
+        padding: 15px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .project-link {
+        max-width: none;
+    }
+    
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .intro-text h1 {
+        font-size: 1.6em;
+    }
+    
+    .intro-text p {
+        font-size: 1em;
+    }
+    
+    .projects-description {
+        font-size: 0.9em !important;
+        margin-top: 15px !important;
+        padding-top: 10px;
+    }
+    
+    .content-section {
+        margin-top: -80px;
+        gap: 20px;
+    }
+    
+    .github-href {
+        font-size: 18px;
+    }
+    
+    .projects-link {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
+    .back-link {
+        left: 15px;
+        top: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Very small mobile phones (360px and below) */
+@media (max-width: 360px) {
+    .project-grid {
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .project-frame {
+        min-height: 340px;
+    }
+    
+    .project-features span {
+        font-size: 0.8em;
+    }
+    
+    .content-section {
+        margin-top: -60px;
+    }
+    
+    .matrix {
+        top: -10px;
+    }
+    
+    .intro-text h1 {
+        font-size: 1.4em;
+    }
+}
+
+/* Landscape orientation on mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        min-height: 80vh;
+    }
+    
+    .content-section {
+        margin-top: -80px;
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .projects-link {
+        margin-top: 0;
+    }
+}
+
+/* High-density displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .github-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+    .language-switcher,
+    .back-link {
+        display: none;
+    }
+    
+    .project-frame {
+        border: 1px solid #000;
+        box-shadow: none;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+}

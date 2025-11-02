@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if language == 'ru' %}Мои проекты - Doggenii{% else %}My Projects - Doggenii{% endif %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/responsive.css') }}">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <a href="{{ url_for('set_language', language='en') }}" 
+           class="lang-btn {% if language == 'en' %}active{% endif %}">EN</a>
+        <a href="{{ url_for('set_language', language='ru') }}" 
+           class="lang-btn {% if language == 'ru' %}active{% endif %}">RU</a>
+    </div>
+
+    <header>
+        <div class="projects-header">
+            <a href="{{ url_for('home') }}" class="back-link">
+                {% if language == 'ru' %}← На главную{% else %}← Back to main{% endif %}
+            </a>
+            <div class="intro-text">
+                <h1>{% if language == 'ru' %}Меня зовут Влад{% else %}My name is Vlad{% endif %}</h1>
+                <p>{% if language == 'ru' %}Full-stack разработчик из Сибири{% else %}I'm full-stack developer from Siberia{% endif %}</p>
+                <p class="projects-description">
+                    {% if language == 'ru' %}Здесь вы можете посмотреть мои проекты{% else %}You can view my projects here{% endif %}
+                </p>
+            </div>
+        </div>
+    </header>
+    
+    <main class="projects-container">
+        <div class="project-grid">
+            <!-- Project 1 - Defectoscopes System -->
+            <div class="project-frame">
+                <div class="project-content">
+                    <h3>{% if language == 'ru' %}Система отслеживания дефектоскопов{% else %}Defectoscopes Tracking System{% endif %}</h3>
+                    <p class="project-tech">Flask · Python · SQLite · HTML · CSS · JavaScript</p>
+                    <p class="project-description">
+                        {% if language == 'ru' %}
+                            Веб-приложение для отслеживания дефектоскопов на РЖД. Отслеживание местоположения оборудования в реальном времени.
+                        {% else %}
+                            Web application for tracking defectoscopes on Russian Railways. Real-time equipment location tracking.
+                        {% endif %}
+                    </p>
+                    <div class="project-features">
+                        <span>✅ {% if language == 'ru' %}Отслеживание в реальном времени{% else %}Real-time tracking{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Многопользовательская аутентификация{% else %}Multi-user authentication{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Интеграция API Яндекс карт{% else %}Yandex Maps API integration{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}SQLite база данных{% else %}SQLite database{% endif %}</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">{% if language == 'ru' %}Демо{% else %}View Demo{% endif %}</a>
+                        <a href="#" class="project-link" target="_blank">{% if language == 'ru' %}Исходный код{% else %}Source Code{% endif %}</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 - Portfolio Website -->
+            <div class="project-frame">
+                <div class="project-content">
+                    <h3>{% if language == 'ru' %}Сайт-портфолио{% else %}Personal Portfolio Website{% endif %}</h3>
+                    <p class="project-tech">Flask · HTML · CSS · Python</p>
+                    <p class="project-description">
+                        {% if language == 'ru' %}
+                            Современный адаптивный сайт-портфолио с matrix-дизайном и интерактивными элементами.
+                        {% else %}
+                            Modern responsive portfolio website with matrix-style design and interactive elements.
+                        {% endif %}
+                    </p>
+                    <div class="project-features">
+                        <span>✅ {% if language == 'ru' %}Адаптивный дизайн{% else %}Responsive design{% endif %}</span>
+                        <span>✅ Flask backend</span>
+                        <span>✅ {% if language == 'ru' %}Matrix тематика{% else %}Matrix theme{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Мультиязычность{% else %}Multi-language{% endif %}</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="{{ url_for('home') }}" class="project-link">{% if language == 'ru' %}Посмотреть{% else %}View Live{% endif %}</a>
+                        <a href="https://github.com/Doggenii" class="project-link" target="_blank">{% if language == 'ru' %}Исходный код{% else %}Source Code{% endif %}</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 - Fridge Bot -->
+            <div class="project-frame">
+                <div class="project-content">
+                    <h3>{% if language == 'ru' %}Бот для учета продуктов{% else %}Fridge Tracker Bot{% endif %}</h3>
+                    <p class="project-tech">Python · Telebot · SQLite · Telegram API</p>
+                    <p class="project-description">
+                        {% if language == 'ru' %}
+                            Telegram бот для учета продуктов, отслеживания сроков годности и создания списков покупок.
+                        {% else %}
+                            Telegram bot for tracking food products, expiration dates, and creating shopping lists.
+                        {% endif %}
+                    </p>
+                    <div class="project-features">
+                        <span>✅ {% if language == 'ru' %}Учет продуктов{% else %}Product tracking{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Сроки годности{% else %}Expiration dates{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Списки покупок{% else %}Shopping lists{% endif %}</span>
+                        <span>✅ SQLite database</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://t.me/botfridgebot" class="project-link" target="_blank">{% if language == 'ru' %}Попробовать{% else %}Try Bot{% endif %}</a>
+                        <a href="https://github.com/Doggenii" class="project-link" target="_blank">{% if language == 'ru' %}Исходный код{% else %}Source Code{% endif %}</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 - NOMINATION Bot -->
+            <div class="project-frame">
+                <div class="project-content">
+                    <h3>{% if language == 'ru' %}Бот магазина Nomination{% else %}Nomination Store Bot{% endif %}</h3>
+                    <p class="project-tech">Python · Telebot · SQLite · Telegram API</p>
+                    <p class="project-description">
+                        {% if language == 'ru' %}
+                            Коммерческий Telegram бот для бренда Nomination с каталогом товаров и заказами.
+                        {% else %}
+                            Commerce Telegram bot for Nomination brand with product catalog and ordering.
+                        {% endif %}
+                    </p>
+                    <div class="project-features">
+                        <span>✅ {% if language == 'ru' %}Каталог товаров{% else %}Product catalog{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}FAQ и поддержка{% else %}FAQ & support{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Система заказов{% else %}Order system{% endif %}</span>
+                        <span>✅ SQLite database</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://t.me/charmz_bot" class="project-link" target="_blank">{% if language == 'ru' %}Попробовать{% else %}Try Bot{% endif %}</a>
+                        <a href="https://github.com/Doggenii" class="project-link" target="_blank">{% if language == 'ru' %}Исходный код{% else %}Source Code{% endif %}</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 - Medical Assistant -->
+            <div class="project-frame">
+                <div class="project-content">
+                    <h3>{% if language == 'ru' %}Голосовой ассистент РЖД Медицина{% else %}RZD Medical Voice Assistant{% endif %}</h3>
+                    <p class="project-tech">Python · SpeechRecognition · SQLite · Flask</p>
+                    <p class="project-description">
+                        {% if language == 'ru' %}
+                            Система распознавания голоса для РЖД медицины с автоматическим заполнением базы данных.
+                        {% else %}
+                            Speech recognition system for RZD medicine with automatic database filling.
+                        {% endif %}
+                    </p>
+                    <div class="project-features">
+                        <span>✅ {% if language == 'ru' %}Распознавание голоса{% else %}Speech recognition{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Автозаполнение БД{% else %}Auto DB filling{% endif %}</span>
+                        <span>✅ {% if language == 'ru' %}Медицинская терминология{% else %}Medical terminology{% endif %}</span>
+                        <span>✅ SQLite database</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">{% if language == 'ru' %}Демо{% else %}View Demo{% endif %}</a>
+                        <a href="https://github.com/Doggenii" class="project-link" target="_blank">{% if language == 'ru' %}Исходный код{% else %}Source Code{% endif %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
